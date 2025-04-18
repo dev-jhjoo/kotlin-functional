@@ -1,10 +1,12 @@
 package com.william.kotlin.chapter02
 
-val op: (Int, Int) -> Int = { x, y -> x * y }
+
 
 fun main() {
     fun multiply(a: Int, b: Int): Int = a * b
-
-    val mulFunc: (Int, Int) -> Int = ::multiply
+    val mulFunc = ::multiply
     println(mulFunc(4, 5)) // 20
+
+    val op: (Int, Int) -> Int = { x, y -> x * y }
+    println(op(4, 5)) // 20
 }
